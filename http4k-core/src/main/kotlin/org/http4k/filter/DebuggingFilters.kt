@@ -38,5 +38,7 @@ object DebuggingFilters {
     /**
      * Print details of a request and it's response.
      */
+    @JvmStatic
+    @JvmOverloads
     fun PrintRequestAndResponse(out: PrintStream = System.out, debugStream:Boolean = defaultDebugStream) = PrintRequest(out, debugStream).then(PrintResponse(out, debugStream))
 }
