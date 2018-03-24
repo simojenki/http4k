@@ -67,7 +67,7 @@ class ContractRoutingHttpHandlerTest {
     }
 
     @Test
-    fun `OPTIONS traffic goes to the path specified but is intercepted by the default response if the route does NOT response to OPTIONS`() {
+    fun `OPTIONS traffic to path specified is intercepted by default when route NOT respond to OPTIONS`() {
         val root = routes(
             "/root/bar" bind contract(
                 "/foo/bar" bindContract GET to { Response(NOT_IMPLEMENTED) })
